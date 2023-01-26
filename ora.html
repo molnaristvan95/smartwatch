@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" oncontextmenu="return false">
+
+<head>
+  <meta name="description" content="Okosóra, smartwatch, demo">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Molnár István || Мельник Степан">
+  <meta name="keywords" content="">
+  <meta name="theme-color" content="#050">
+  <script src="https://kit.fontawesome.com/22540bdcfe.js" crossorigin="anonymous" defer></script>
+  <title>Hervis || okosórák</title>
+  <base href="" target="_self">
+  <style rel="stylesheet" type="text/css">
+    /* variables */
+    *:root {
+      font-size: 16px;
+      --iconsize: 2.34vw;
+    }
+
+    /* base styles */
+    * {
+      box-sizing: border-box;
+      -webkit-user-select: none !important;
+    }
+
+    body#main {
+      margin: 0;
+      backgroun: #ffab;
+      overflow: hidden hidden;
+    }
+
+    body#main::-webkit-scrollbar {
+      display: none;
+    }
+
+    i {}
+
+    img {
+      max-width: 33vw;
+      image-rendering: pixelated;
+    }
+
+    /* targeted styles */
+    header {
+      background: #000;
+      height: 18vh;
+      position: relative;
+    }
+
+    header>* {
+      borde: 1px solid red;
+    }
+
+    img#logo {
+      width: 18%;
+      margin: 1vw 3.5vw;
+      z-index: 99999;
+      position: relative;
+    }
+
+    article#searchbar {
+      display: inline-flex;
+      align-items: center;
+      background: #666;
+      position: absolute;
+      top: calc(50% - 50% / 2);
+      left: 25.5%;
+      width: 39%;
+      height: 50%;
+      border-radius: 999px;
+      color: #ffab;
+      font-size: calc(2.3vw + 2.3vh);
+      text-indent: 35px;
+    }
+
+    article#searchbar>i[class*="fa"] {
+      color: #ffab;
+      position: absolute;
+      right: 7%;
+      top:calc(50% - 30px);
+      width: 60px;
+      height: 60px;
+      borde: 1px solid red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+    }
+
+    div#icons {
+      width: 30%;
+      height: 50%;
+      display: inline-flex;
+      justify-content: space-around;
+      align-items: center;
+      position: absolute;
+      right:3%;
+      top:calc(50% - 50% / 2);
+      borde:2px solid yellow;
+    }
+
+    div.iconbox {
+      display: inline-block;
+    }
+
+    div.iconbox>* {
+      display: block;
+      text-align: center;
+      color: #ffab;
+    }
+
+    .iconbox>span {
+      margin-top: 8px;
+    }
+
+    #icons::after {
+      content: '1';
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f00;
+      color: #fff;
+      border-radius: 50px;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 5%;
+      right: 6%;
+      z-index: 99;
+    }
+
+    i[class*="fa"] {
+      font-size: var(--iconsize);
+    }
+
+    section {
+      backgroun: #bba;
+      margin-top: 3.5vh;
+      height: 77vh;
+      border: 1px solid green;
+    }
+
+    section > * {
+      borde: 1px solid red;
+    }
+
+    figure {
+      width: 40vw;
+      height: 100%;
+      position: relative;
+      display: inline-block;
+      margin-left: calc(3.5vw - (40vw * .1 / 3));
+      margin-top: 0;
+      margin-right: -100px;
+    }
+
+    figure>img {
+      float: left;
+      display: inline-block;
+      width: 45%;
+      height: 45%;
+      margin-left: calc(10% / 3);
+      margin-top: calc(10% / 4);
+      object-fit: contain;
+      border: 1px outset #9979;
+      border-radius: 4px;
+      animation: 8s zooming ease-in-out infinite;
+      padding: 16px;
+    }
+
+    figure>img:nth-of-type(2) {
+      animation-delay: 2s;
+    }
+
+    figure>img:nth-of-type(3) {
+      animation-delay: 4s;
+    }
+
+    figure>img:nth-of-type(4) {
+      animation-delay: 6s;
+    }
+
+    figure>img:hover {
+      transfor: scale(1.1);
+    }
+
+    @keyframes zooming {
+      0% {
+        transform: scale(1);
+      }
+
+      6.25% {
+        transform: scale(1.1);
+      }
+
+      12.5% {
+        transform: scale(1);
+      }
+    }
+
+    #allDataTogether {
+      border: 3px outset #0ff;
+      height: 93%;
+      width: 57%;
+      backgroun: red;
+      display: inline-block;
+      margin-top: 1%;
+      margin-right: 1%;
+      float: right;
+      border-radius: 4px;
+    }
+
+    /* media queries */
+  </style>
+</head>
+
+<body id="main">
+  <header>
+    <img id="logo" src="https://www.hervis.hu/shop/assets/icons/hervis-hu.svg" alt="Hervis 25 img main svg">
+    <article id="searchbar"><span id="searchbarChild">Okosóra</span><i class="fa-solid fa-magnifying-glass"></i></article>
+    <div id="icons">
+      <div class="iconbox">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Bp. Árkád</span>
+      </div>
+      <div class="iconbox">
+        <i class="fa-solid fa-envelope"></i>
+        <span>Kapcsolat</span>
+      </div>
+      <div class="iconbox">
+        <i class="fa-solid fa-circle-user"></i>
+        <span>VIP kártya</span>
+      </div>
+      <div class="iconbox">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+        <span>Kosaram</span>
+      </div>
+
+    </div>
+  </header>
+  <section>
+    <figure>
+      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
+      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
+      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
+      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
+    </figure>
+    <div id="allDataTogether">
+      data
+    </div>
+  </section>
+
+  <i class="fa-regular fa-credit-card"></i>
+  <script type="text/javascript">
+    //constant data
+    const genEF = (e) => {
+      return document.createElement(e);
+    }, idF = (i) => {
+      return document.getElementById(i);
+    };
+    //database
+    const array0 = ['Garmin', 'VIVOACTIVE 4S', '112 999', 'A cserélhető óraszíjaktól az ellenálló Corning® Gorilla® Glass 3 számlapig, a Garmin Vivoactive 4S GPS-es okosóra egész napos viselésre lett tervezve.','GPS vevő típusa','GPS / GLONASS / Galileo','Funkció1','Body Battery™ energiafigyelés, pulzoximéter, légzésfigyelés, fejlett alvásfigyelés, stressz figyelemmel kísérése, vízháztartás nyomon követése, csuklón mért pulzus','Funkció2','Okos értesítések, zenelejátszás, biztonsági és nyomon követési funkciók, Garmin Pay™, Connect IQ Áruház, Garmin Coach','Óraüveg','Corning Gorilla Glass 3','Akkumlátor','Működési idő: okosóra módban akár 7 nap, GPS+zenelejátszás akár 5 óra','Vezeték nélküli technológiák','Wi-Fi / Bluetooth / ANT+','Vízállóság','5ATM','Szívritmusmérő','Elevate optikai pulzoximéterrel','Terméknév','Vivoactive 4S','Megnevezés','GPS-es okosóra','Kijelző','2,79 cm, napfénynél is olvasható, színes, transzflektív MIP, felbontás: 218 x 218 képpont', 'g1.png', 'g2.png', 'g3.png', 'g4.png'];
+    
+    // functions
+    let engOrHun = 0,
+        searchContent = 'Okosóra',
+        counter = 0,
+        typeWriterMachine = (text) => {
+          let len = text.length;
+      if (counter == len) {
+        idF('searchbarChild').innerText = '';
+        counter = 0;
+        if (searchContent == 'Okosóra') {
+          searchContent = 'Smartwatch';
+        } else {
+          searchContent = 'Okosóra';
+        }
+      } else {
+        idF('searchbarChild').innerText += text[counter];
+        counter++;
+      }
+    },
+        insert = () => {
+          for () {}
+        }
+    //callback and timing
+    idF('searchbarChild').innerText = '';
+    window.setInterval( () => {
+      typeWriterMachine(searchContent);
+    }, 150);
+  </script>
+</body>
+
+</html>
