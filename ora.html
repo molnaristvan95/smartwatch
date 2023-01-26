@@ -78,7 +78,7 @@
       color: #ffab;
       position: absolute;
       right: 7%;
-      top:calc(50% - 30px);
+      top: calc(50% - 30px);
       width: 60px;
       height: 60px;
       borde: 1px solid red;
@@ -95,9 +95,9 @@
       justify-content: space-around;
       align-items: center;
       position: absolute;
-      right:3%;
-      top:calc(50% - 50% / 2);
-      borde:2px solid yellow;
+      right: 3%;
+      top: calc(50% - 50% / 2);
+      borde: 2px solid yellow;
     }
 
     div.iconbox {
@@ -141,7 +141,7 @@
       border: 1px solid green;
     }
 
-    section > * {
+    section>* {
       borde: 1px solid red;
     }
 
@@ -211,6 +211,10 @@
       border-radius: 4px;
     }
 
+    #allDataTogether>span {
+      margin-top: 22px;
+    }
+
     /* media queries */
   </style>
 </head>
@@ -241,54 +245,68 @@
   </header>
   <section>
     <figure>
-      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
-      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
-      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
-      <img src="https://www.hervis.hu/medias/sys_master/images/images/ha6/h97/26598332727326/Garmin-Forerunner-55-2995151-07-300412.jpg" alt="image of smartwatch">
+      <img src="g2.png" alt="image of smartwatch">
+      <img src="g3.png" alt="image of smartwatch">
+      <img src="g4.png" alt="image of smartwatch">
+      <img src="g1.png" alt="image of smartwatch">
     </figure>
-    <div id="allDataTogether">
-      data
-    </div>
+    <div id="allDataTogether"></div>
   </section>
 
   <i class="fa-regular fa-credit-card"></i>
   <script type="text/javascript">
     //constant data
     const genEF = (e) => {
-      return document.createElement(e);
-    }, idF = (i) => {
-      return document.getElementById(i);
-    };
+        return document.createElement(e);
+      },
+      idF = (i) => {
+        return document.getElementById(i);
+      };
     //database
-    const array0 = ['Garmin', 'VIVOACTIVE 4S', '112 999', 'A cserélhető óraszíjaktól az ellenálló Corning® Gorilla® Glass 3 számlapig, a Garmin Vivoactive 4S GPS-es okosóra egész napos viselésre lett tervezve.','GPS vevő típusa','GPS / GLONASS / Galileo','Funkció1','Body Battery™ energiafigyelés, pulzoximéter, légzésfigyelés, fejlett alvásfigyelés, stressz figyelemmel kísérése, vízháztartás nyomon követése, csuklón mért pulzus','Funkció2','Okos értesítések, zenelejátszás, biztonsági és nyomon követési funkciók, Garmin Pay™, Connect IQ Áruház, Garmin Coach','Óraüveg','Corning Gorilla Glass 3','Akkumlátor','Működési idő: okosóra módban akár 7 nap, GPS+zenelejátszás akár 5 óra','Vezeték nélküli technológiák','Wi-Fi / Bluetooth / ANT+','Vízállóság','5ATM','Szívritmusmérő','Elevate optikai pulzoximéterrel','Terméknév','Vivoactive 4S','Megnevezés','GPS-es okosóra','Kijelző','2,79 cm, napfénynél is olvasható, színes, transzflektív MIP, felbontás: 218 x 218 képpont', 'g1.png', 'g2.png', 'g3.png', 'g4.png'];
-    
+    const array0 = ['Garmin', 'VIVOACTIVE 4S', '112 999', '3022095', 'stb', 'A cserélhető óraszíjaktól az ellenálló Corning® Gorilla® Glass 3 számlapig, a Garmin Vivoactive 4S GPS-es okosóra egész napos viselésre lett tervezve.', 'GPS vevő típusa', 'GPS / GLONASS / Galileo', 'Funkció1', 'Body Battery™ energiafigyelés, pulzoximéter, légzésfigyelés, fejlett alvásfigyelés, stressz figyelemmel kísérése, vízháztartás nyomon követése, csuklón mért pulzus', 'Funkció2', 'Okos értesítések, zenelejátszás, biztonsági és nyomon követési funkciók, Garmin Pay™, Connect IQ Áruház, Garmin Coach', 'Óraüveg', 'Corning Gorilla Glass 3', 'Akkumlátor', 'Működési idő: okosóra módban akár 7 nap, GPS+zenelejátszás akár 5 óra', 'Vezeték nélküli technológiák', 'Wi-Fi / Bluetooth / ANT+', 'Vízállóság', '5ATM', 'Szívritmusmérő', 'Elevate optikai pulzoximéterrel', 'Terméknév', 'Vivoactive 4S', 'Megnevezés', 'GPS-es okosóra', 'Kijelző', '2,79 cm, napfénynél is olvasható, színes, transzflektív MIP, felbontás: 218 x 218 képpont', 'g1.png', 'g2.png', 'g3.png', 'g4.png'];
+
     // functions
     let engOrHun = 0,
-        searchContent = 'Okosóra',
-        counter = 0,
-        typeWriterMachine = (text) => {
-          let len = text.length;
-      if (counter == len) {
-        idF('searchbarChild').innerText = '';
-        counter = 0;
-        if (searchContent == 'Okosóra') {
-          searchContent = 'Smartwatch';
+      searchContent = 'Okosóra',
+      counter = 0,
+      typeWriterMachine = (text) => {
+        let len = text.length;
+        if (counter == len) {
+          idF('searchbarChild').innerText = '';
+          counter = 0;
+          if (searchContent == 'Okosóra') {
+            searchContent = 'Smartwatch';
+          } else {
+            searchContent = 'Okosóra';
+          }
         } else {
-          searchContent = 'Okosóra';
+          idF('searchbarChild').innerText += text[counter];
+          counter++;
         }
-      } else {
-        idF('searchbarChild').innerText += text[counter];
-        counter++;
+      },
+      load = 0,
+      insert = () => {
+        if (load == array0.length - 4) {
+          load = 0;
+          idF('allDataTogether').innerHTML = '';
+        } else {
+          let sp = genEF('SPAN');
+          sp.innerText = array0[load];
+          sp.setAttribute('style', 'width:40%; display:inline-block;');
+          idF('allDataTogether').appendChild(sp);
+          load++;
+        }
       }
-    },
-        insert = () => {
-          //for () {}
-        }
     //callback and timing
     idF('searchbarChild').innerText = '';
-    window.setInterval( () => {
+    window.setInterval(() => {
       typeWriterMachine(searchContent);
     }, 150);
+    insert();
+    window.setInterval(() => {
+      insert();
+    }, 200);
+    //insert();
   </script>
 </body>
 
